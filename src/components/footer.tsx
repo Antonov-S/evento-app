@@ -17,7 +17,7 @@ export default function Footer() {
       <small className="text-xs">
         <p>
           © Copyright by{" "}
-          <Link href="/" target="_blank">
+          <Link className="text-accent" href="/" target="_blank">
             S.Antonov
           </Link>
           . Intended for learning purposes.

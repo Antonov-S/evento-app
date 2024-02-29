@@ -1,7 +1,8 @@
-import { FETCH_URL } from "@/utils/constants";
-import H1 from "@/components/h1";
-import { log } from "console";
 import { EventoEvent } from "@/app/lib/types";
+import { FETCH_URL } from "@/utils/constants";
+
+import H1 from "@/components/h1";
+import EventsList from "@/components/events-list";
 
 type EventsPageProps = {
   params: {
@@ -23,9 +24,7 @@ export default async function EventsPage({ params }: EventsPageProps) {
           `Events in ${city.charAt(0).toUpperCase() + city.slice(1)}`}
       </H1>
 
-      {events.map(event => (
-        <section key={event.id}>{event.name}</section>
-      ))}
+      <EventsList events={events} />
     </main>
   );
 }

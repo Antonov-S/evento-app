@@ -1,5 +1,5 @@
 import { EventoEvent } from "@/app/lib/types";
-import { FETCH_URL } from "@/utils/constants";
+import { FETCH_URL } from "@/lib/constants";
 
 import H1 from "@/components/h1";
 import EventsList from "@/components/events-list";
@@ -13,7 +13,7 @@ type EventsPageProps = {
 export default async function EventsPage({ params }: EventsPageProps) {
   const city = params.city;
 
-  const response = await fetch(FETCH_URL);
+  const response = await fetch(`${FETCH_URL}?city=${city}`);
   const events: EventoEvent[] = await response.json();
 
   return (

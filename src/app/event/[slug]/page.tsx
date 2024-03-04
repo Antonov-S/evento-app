@@ -1,8 +1,7 @@
 import Image from "next/image";
 
-import { FETCH_URL } from "@/lib/constants";
 import H1 from "@/components/h1";
-import { sleep } from "@/lib/utils";
+import { FETCH_URL } from "@/lib/constants";
 
 type EventPageProp = {
   params: { slug: string };
@@ -10,9 +9,6 @@ type EventPageProp = {
 
 export default async function EventPage({ params }: EventPageProp) {
   const slug = params.slug;
-
-  await sleep(2000);
-
   const response = await fetch(`${FETCH_URL}/${slug}`);
   const event = await response.json();
 

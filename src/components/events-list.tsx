@@ -1,16 +1,17 @@
 import { EventoEvent } from "@/app/lib/types";
-import EventCard from "./event-card";
-import { sleep } from "@/lib/utils";
 import { FETCH_URL } from "@/lib/constants";
+import EventCard from "./event-card";
 
 type EventsListProps = {
   city: string;
 };
 
 export default async function EventsList({ city }: EventsListProps) {
-  await sleep(2000);
-
-  const response = await fetch(`${FETCH_URL}?city=${city}`);
+  const response = await fetch(`${FETCH_URL}?city=${city}`, {
+    next: {
+      revalidate: 300
+    }
+  });
   const events: EventoEvent[] = await response.json();
 
   return (

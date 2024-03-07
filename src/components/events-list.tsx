@@ -1,5 +1,4 @@
-import { EventoEvent } from "@/app/lib/types";
-import { FETCH_URL } from "@/lib/constants";
+import { getEvents } from "@/lib/utils";
 import EventCard from "./event-card";
 
 type EventsListProps = {
@@ -7,12 +6,7 @@ type EventsListProps = {
 };
 
 export default async function EventsList({ city }: EventsListProps) {
-  const response = await fetch(`${FETCH_URL}?city=${city}`, {
-    next: {
-      revalidate: 300
-    }
-  });
-  const events: EventoEvent[] = await response.json();
+  const events = await getEvents(city);
 
   return (
     <section className="max-w-[1100px] flex flex-wrap gap-10 justify-center px-[20px]">

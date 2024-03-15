@@ -15,9 +15,15 @@ export default async function EventsList({ city, page = 1 }: EventsListProps) {
     totalCount > 6 * page ? `/events/${city}?page=${page + 1}` : "";
   return (
     <section className="max-w-[1100px] flex flex-wrap gap-10 justify-center px-[20px]">
-      {events.map(event => (
-        <EventCard event={event} key={event.id} />
-      ))}
+      {totalCount === 0 ? (
+        <section className="w-full h-full flex flex-col bg-white/[3%] rounded-xl overflow-hidden relative state-effects">
+          <div className="flex flex-col flex-1 justify-center items-center">
+            <h2 className="text-2xl font-semibold">No results found</h2>
+          </div>
+        </section>
+      ) : (
+        events.map(event => <EventCard event={event} key={event.id} />)
+      )}
 
       <PaginationControls previousPath={previousPath} nextPath={nextPath} />
     </section>

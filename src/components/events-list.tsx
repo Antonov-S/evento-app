@@ -19,6 +19,9 @@ export default async function EventsList({ city, page = 1 }: EventsListProps) {
         <section className="w-full h-full flex flex-col bg-white/[3%] rounded-xl overflow-hidden relative state-effects">
           <div className="flex flex-col flex-1 justify-center items-center">
             <h2 className="text-2xl font-semibold">No results found</h2>
+            <p className="italic text-white/75">
+              Try a different location or check the spelling of the current one.
+            </p>
           </div>
         </section>
       ) : (

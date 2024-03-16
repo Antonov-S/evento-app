@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p id="start" align="center">
+<br>
 
-## Getting Started
+  <h1 align="center" color='7582EB'>Evento</h1>
+  
+</p>
+Evento is a dummy dashboard for events. It is open to everyone who needs to find and shere events.
 
-First, run the development server:
+## Table of Contents
 
-```bash
+1. <a href="#overview">Overview</a>
+2. <a href="#builtWith">Built with</a>
+3. <a href="#appShots">Screenshots</a>
+
+<h2 id="overview">Overview</h2>
+Evento is a web application intended for learning purposes. It has the following functionality:
+
+- browse all the available events
+- browse available events by city
+- popular cities like Austin and Seattle are available via individual buttons below the search box
+- pagination if found events are more than 6
+- discrete animation when the found results are presented
+- the results found are sorted by date
+- easy to share via open graph images
+
+#### Application Nav
+
+![Application Nav](/appScreens/evento_nav.jpg)
+
+<h2 id="builtWith">Built With</h2>
+
+- Next.js
+- TypeScript
+- Prisma
+- PostgreSQL
+- Zod
+- Tailwind CSS
+- Framer Motion
+- Radix UI
+
+<h2 id="appConfig">Application Configurations</h2>
+
+### Available Scripts
+
+After cloning this Repository, you can open it with any code editor.
+
+```javascript
+# install dependencies
+npm install
+
+# start
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2 id="appShots">Screenshots</h2>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Home View
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![Home View](/appScreens/home.jpg)
 
-## Learn More
+### City events
 
-To learn more about Next.js, take a look at the following resources:
+![City Events](/appScreens/events_city.jpg)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Event View
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Event View](/appScreens/event.jpg)

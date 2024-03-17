@@ -20,7 +20,8 @@ Evento is a web application intended for learning purposes. It has the following
 - popular cities like Austin and Seattle are available via individual buttons below the search box
 - pagination if found events are more than 6
 - discrete animation when the found results are presented
-- the results found are sorted by date
+- the results are sorted by date
+- show skeletons while loading
 - easy to share via open graph images
 
 #### Application Nav

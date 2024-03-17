@@ -17,7 +17,11 @@ export default function Footer() {
       <small className="text-xs">
         <p>
           © Copyright by{" "}
-          <Link className="text-accent" href="/" target="_blank">
+          <Link
+            className="text-accent"
+            href="https://s-antonov-portfolio-website.vercel.app/"
+            target="_blank"
+          >
             S.Antonov
           </Link>
           . Intended for learning purposes.

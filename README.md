@@ -9,8 +9,9 @@ Evento is a dummy dashboard for events. It is open to everyone who needs to find
 ## Table of Contents
 
 1. <a href="#overview">Overview</a>
-2. <a href="#builtWith">Built with</a>
-3. <a href="#appShots">Screenshots</a>
+2. <a href="appConfig">Application Configurations</a>
+3. <a href="#builtWith">Built with</a>
+4. <a href="#appShots">Screenshots</a>
 
 <h2 id="overview">Overview</h2>
 Evento is a web application intended for learning purposes. It has the following functionality:
@@ -23,6 +24,22 @@ Evento is a web application intended for learning purposes. It has the following
 - the results are sorted by date
 - show skeletons while loading
 - easy to share via open graph images
+
+<h2 id="appConfig">Application Configurations</h2>
+
+### Available Scripts
+
+After cloning this Repository, you can open it with any code editor.
+
+```javascript
+# install dependencies
+npm install
+
+# start
+npm run dev
+```
+
+**Node.js version:** `v20.10.0`
 
 #### Application Nav
 
@@ -38,20 +55,6 @@ Evento is a web application intended for learning purposes. It has the following
 - Tailwind CSS
 - Framer Motion
 - Radix UI
-
-<h2 id="appConfig">Application Configurations</h2>
-
-### Available Scripts
-
-After cloning this Repository, you can open it with any code editor.
-
-```javascript
-# install dependencies
-npm install
-
-# start
-npm run dev
-```
 
 <h2 id="appShots">Screenshots</h2>
 
